@@ -1,0 +1,347 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage{graphicx}
+\usepackage{lscape}
+\title{Results}
+\author{}
+\date{\today}
+\begin{document}
+\begin{landscape}
+\oddsidemargin 0in \topmargin 0in\maketitle
+\section{Tables of Friedman, Aligned Friedman, Bonferroni-Dunn, Holm, Hochberg and Hommel Tests}
+\begin{table}[!htp]
+\centering
+\caption{Average Rankings of the algorithms (Friedman)
+}\begin{tabular}{c|c}
+Algorithm&Ranking\\
+\hline
+ RING&4.959999999999999\\
+ TREE&5.039999999999998\\
+ NETA&4.959999999999999\\
+ NETB&4.959999999999998\\
+ TORUS&5.059999999999999\\
+ GRAPH&5.3199999999999985\\
+ SAME&4.959999999999999\\
+ GOODBAD&4.869999999999999\\
+ RAND&4.869999999999999\\
+\end{tabular}
+\end{table}
+
+
+Friedman statistic (distributed according to chi-square with 8 degrees of freedom: 0.9853333333325054. 
+P-value computed by Friedman Test: 0.9983393538102286.\newline
+
+Iman and Davenport statistic (distributed according to F-distribution with 8 and 392 degrees of freedom: 0.12100140011551622. 
+P-value computed by Iman and Daveport Test: 0.9984061848725897.\newline
+
+
+\newpage
+
+\begin{table}[!htp]
+\centering
+\caption{Average Rankings of the algorithms (Aligned Friedman)
+}\begin{tabular}{c|c}
+Algorithm&Ranking\\
+\hline
+ RING&222.76999999999984\\
+ TREE&224.60999999999981\\
+ NETA&221.99999999999983\\
+ NETB&221.99999999999983\\
+ TORUS&230.91999999999982\\
+ GRAPH&255.0099999999998\\
+ SAME&222.76999999999984\\
+ GOODBAD&214.70999999999984\\
+ RAND&214.70999999999984\\
+\end{tabular}
+\end{table}
+
+
+Aligned Friedman statistic (distributed according to chi-square with 8 degrees of freedom: 40.986399746359325. 
+P-value computed by Aligned Friedman Test: 2.0968734527615496E-6.\newline
+
+
+\newpage
+
+\begin{table}[!htp]
+\centering
+\caption{Average Rankings of the algorithms (Quade)
+}\begin{tabular}{c|c}
+Algorithm&Ranking\\
+\hline
+ RING&4.926274509803922\\
+ TREE&5.0831372549019616\\
+ NETA&4.926274509803922\\
+ NETB&4.926274509803923\\
+ TORUS&5.12235294117647\\
+ GRAPH&5.547450980392157\\
+ SAME&4.926274509803923\\
+ GOODBAD&4.770980392156864\\
+ RAND&4.770980392156864\\
+\end{tabular}
+\end{table}
+Quade statistic (distributed according to F-distribution with 8 and 392 degrees of freedom: 0.2788345895242685. 
+P-value computed by Quade Test: 0.9727048389531654.\newline
+
+
+\newpage
+
+\begin{table}[!htp]
+\centering\tiny
+\caption{Contrast Estimation}
+\begin{tabular}{
+|r|r|r|r|r|r|r|r|r|r|}
+\hline
+ & RING& TREE& NETA& NETB& TORUS& GRAPH& SAME& GOODBAD& RAND\\
+\hline
+ RING&0.000&0.000&0.000&0.000&0.000&0.000&0.000&0.000&0.000\\
+\hline
+ TREE&0.000&0.000&0.000&0.000&0.000&0.000&0.000&0.000&0.000\\
+\hline
+ NETA&0.000&0.000&0.000&0.000&0.000&0.000&0.000&0.000&0.000\\
+\hline
+ NETB&0.000&0.000&0.000&0.000&0.000&0.000&0.000&0.000&0.000\\
+\hline
+ TORUS&0.000&0.000&0.000&0.000&0.000&0.000&0.000&0.000&0.000\\
+\hline
+ GRAPH&0.000&0.000&0.000&0.000&0.000&0.000&0.000&0.000&0.000\\
+\hline
+ SAME&0.000&0.000&0.000&0.000&0.000&0.000&0.000&0.000&0.000\\
+\hline
+ GOODBAD&0.000&0.000&0.000&0.000&0.000&0.000&0.000&0.000&0.000\\
+\hline
+ RAND&0.000&0.000&0.000&0.000&0.000&0.000&0.000&0.000&0.000\\
+\hline
+
+\end{tabular}
+\end{table}
+
+\newpage
+
+\begin{table}[!htp]
+\centering\scriptsize
+\caption{Holm / Hochberg / Holland / Rom / Finner / Li Table for $\alpha=0.05$ (FRIEDMAN)}
+\begin{tabular}{ccccccccc}
+$i$&algorithm&$z=(R_0 - R_i)/SE$&$p$&Holm/Hochberg/Hommel&Holland&Rom&Finner&Li\\
+\hline
+8& GRAPH&0.8215838362577479&0.4113137917762598&0.00625&0.006391150954545011&0.006574125233361166&0.006391150954545011&0.0\\
+7& TORUS&0.34689095308660434&0.7286732435303455&0.0071428571428571435&0.007300831979014655&0.0075128293213784685&0.012741455098566168&0.0\\
+6& TREE&0.3103761159195924&0.7562749546662049&0.008333333333333333&0.008512444610847103&0.008764162596519848&0.019051173490195694&0.0\\
+5& RING&0.1643167672515496&0.8694817827381617&0.01&0.010206218313011495&0.010515350115740741&0.025320565519103666&0.0\\
+4& NETA&0.1643167672515496&0.8694817827381617&0.0125&0.012741455098566168&0.013109375000000001&0.031549888917161595&0.0\\
+3& SAME&0.1643167672515496&0.8694817827381617&0.016666666666666666&0.016952427508441503&0.016666666666666666&0.03773939976903784&0.0\\
+2& NETB&0.16431676725154795&0.869481782738163&0.025&0.025320565519103666&0.025&0.04388935252272508&0.0\\
+1& RAND&0.0&1.0&0.05&0.050000000000000044&0.05&0.050000000000000044&0.05\\
+\hline
+\end{tabular}
+\end{table}
+Bonferroni-Dunn's procedure rejects those hypotheses that have a p-value $\le0.00625$.
+
+
+Holm's procedure rejects those hypotheses that have a p-value $\le0.00625$.
+
+
+Hommel's procedure rejects those hypotheses that have a p-value $\le0.00625$.
+
+
+Holland's procedure rejects those hypotheses that have a p-value $\le0.006391150954545011$.
+
+
+Finner's procedure rejects those hypotheses that have a p-value $\le0.006391150954545011$.
+
+
+Li's procedure rejects those hypotheses that have a p-value $\le0.0$.
+
+
+
+\newpage
+
+\begin{table}[!htp]
+\centering\scriptsize
+\caption{Holm / Hochberg / Holland / Rom / Finner / Li Table for $\alpha=0.05$ (ALIGNED FRIEDMAN)}
+\begin{tabular}{ccccccccc}
+$i$&algorithm&$z=(R_0 - R_i)/SE$&$p$&Holm/Hochberg/Hommel&Holland&Rom&Finner&Li\\
+\hline
+8& GRAPH&1.549427092939215&0.12127908507634506&0.00625&0.006391150954545011&0.006574125233361166&0.006391150954545011&0.0\\
+7& TORUS&0.6232310961921754&0.5331326698657505&0.0071428571428571435&0.007300831979014655&0.0075128293213784685&0.012741455098566168&0.0\\
+6& TREE&0.3806284918138514&0.7034789365387083&0.008333333333333333&0.008512444610847103&0.008764162596519848&0.019051173490195694&0.0\\
+5& RING&0.30988541858784346&0.7566480916486279&0.01&0.010206218313011495&0.010515350115740741&0.025320565519103666&0.0\\
+4& SAME&0.30988541858784346&0.7566480916486279&0.0125&0.012741455098566168&0.013109375000000001&0.031549888917161595&0.0\\
+3& NETA&0.2802809803356545&0.7792619417215579&0.016666666666666666&0.016952427508441503&0.016666666666666666&0.03773939976903784&0.0\\
+2& NETB&0.2802809803356545&0.7792619417215579&0.025&0.025320565519103666&0.025&0.04388935252272508&0.0\\
+1& RAND&0.0&1.0&0.05&0.050000000000000044&0.05&0.050000000000000044&0.05\\
+\hline
+\end{tabular}
+\end{table}
+Bonferroni-Dunn's procedure rejects those hypotheses that have a p-value $\le0.00625$.
+
+
+Holm's procedure rejects those hypotheses that have a p-value $\le0.00625$.
+
+
+Hommel's procedure rejects those hypotheses that have a p-value $\le0.00625$.
+
+
+Holland's procedure rejects those hypotheses that have a p-value $\le0.006391150954545011$.
+
+
+Finner's procedure rejects those hypotheses that have a p-value $\le0.006391150954545011$.
+
+
+Li's procedure rejects those hypotheses that have a p-value $\le0.0$.
+
+
+
+\newpage
+
+\begin{table}[!htp]
+\centering\scriptsize
+\caption{Holm / Hochberg / Holland / Rom / Finner / Li Table for $\alpha=0.05$ (QUADE)}
+\begin{tabular}{ccccccccc}
+$i$&algorithm&$z=(R_0 - R_i)/SE$&$p$&Holm/Hochberg/Hommel&Holland&Rom&Finner&Li\\
+\hline
+8& GRAPH&0.6168852944521827&0.5373103871065616&0.00625&0.006391150954545011&0.006574125233361166&0.006391150954545011&0.0\\
+7& TORUS&0.2791561736510878&0.7801249754918013&0.0071428571428571435&0.007300831979014655&0.0075128293213784685&0.012741455098566168&0.0\\
+6& TREE&0.24800035069895815&0.8041341354591375&0.008333333333333333&0.008512444610847103&0.008764162596519848&0.019051173490195694&0.0\\
+5& NETB&0.12337705889043668&0.9018085226206667&0.01&0.010206218313011495&0.010515350115740741&0.025320565519103666&0.0\\
+4& SAME&0.12337705889043668&0.9018085226206667&0.0125&0.012741455098566168&0.013109375000000001&0.031549888917161595&0.0\\
+3& RING&0.12337705889043597&0.9018085226206671&0.016666666666666666&0.016952427508441503&0.016666666666666666&0.03773939976903784&0.0\\
+2& NETA&0.12337705889043597&0.9018085226206671&0.025&0.025320565519103666&0.025&0.04388935252272508&0.0\\
+1& RAND&0.0&1.0&0.05&0.050000000000000044&0.05&0.050000000000000044&0.05\\
+\hline
+\end{tabular}
+\end{table}
+Bonferroni-Dunn's procedure rejects those hypotheses that have a p-value $\le0.00625$.
+
+
+Holm's procedure rejects those hypotheses that have a p-value $\le0.00625$.
+
+
+Hommel's procedure rejects those hypotheses that have a p-value $\le0.00625$.
+
+
+Holland's procedure rejects those hypotheses that have a p-value $\le0.006391150954545011$.
+
+
+Finner's procedure rejects those hypotheses that have a p-value $\le0.006391150954545011$.
+
+
+Li's procedure rejects those hypotheses that have a p-value $\le0.0$.
+
+
+
+\newpage
+
+\begin{table}[!htp]
+\centering\scriptsize
+\caption{Adjusted $p$-values (FRIEDMAN)}
+\begin{tabular}{ccccccc}
+i&algorithm&unadjusted $p$&$p_{Bonf}$&$p_{Holm}$&$p_{Hoch}$&$p_{Homm}$\\
+\hline
+1& GRAPH&0.4113137917762598&3.2905103342100785&3.2905103342100785&1.0&1.0\\
+2& TORUS&0.7286732435303455&5.829385948242764&5.100712704712418&1.0&1.0\\
+3& TREE&0.7562749546662049&6.050199637329639&5.100712704712418&1.0&1.0\\
+4& RING&0.8694817827381617&6.955854261905293&5.100712704712418&1.0&1.0\\
+5& NETA&0.8694817827381617&6.955854261905293&5.100712704712418&1.0&1.0\\
+6& SAME&0.8694817827381617&6.955854261905293&5.100712704712418&1.0&1.0\\
+7& NETB&0.869481782738163&6.955854261905304&5.100712704712418&1.0&1.0\\
+8& RAND&1.0&8.0&5.100712704712418&1.0&1.0\\
+\hline
+\end{tabular}
+\end{table}
+
+\begin{table}[!htp]
+\centering\scriptsize
+\caption{Adjusted $p$-values (FRIEDMAN)}
+\begin{tabular}{ccccccc}
+i&algorithm&unadjusted $p$&$p_{Holl}$&$p_{Rom}$&$p_{Finn}$&$p_{Li}$\\
+\hline
+1& GRAPH&0.4113137917762598&0.985576492323003&1.0&0.985576492323003&0.9999999999999998\\
+2& TORUS&0.7286732435303455&0.9998917449008606&1.0&0.9945803593365627&1.0000000000000002\\
+3& TREE&0.7562749546662049&0.9998917449008606&1.0&0.9945803593365627&1.0\\
+4& RING&0.8694817827381617&0.9999621247362487&1.0&0.9945803593365627&0.9999999999999999\\
+5& NETA&0.8694817827381617&0.9999621247362487&1.0&0.9945803593365627&0.9999999999999999\\
+6& SAME&0.8694817827381617&0.9999621247362487&1.0&0.9945803593365627&0.9999999999999999\\
+7& NETB&0.869481782738163&0.9999621247362487&1.0&0.9945803593365627&0.9999999999999999\\
+8& RAND&1.0&1.0&1.0&1.0&1.0\\
+\hline
+\end{tabular}
+\end{table}
+
+
+\newpage
+
+\begin{table}[!htp]
+\centering\scriptsize
+\caption{Adjusted $p$-values (ALIGNED FRIEDMAN)}
+\begin{tabular}{ccccccc}
+i&algorithm&unadjusted $p$&$p_{Bonf}$&$p_{Holm}$&$p_{Hoch}$&$p_{Homm}$\\
+\hline
+1& GRAPH&0.12127908507634506&0.9702326806107605&0.9702326806107605&0.9702326806107605&0.890585076253209\\
+2& TORUS&0.5331326698657505&4.265061358926004&3.731928689060253&1.0&1.0\\
+3& TREE&0.7034789365387083&5.627831492309666&4.22087361923225&1.0&1.0\\
+4& RING&0.7566480916486279&6.053184733189023&4.22087361923225&1.0&1.0\\
+5& SAME&0.7566480916486279&6.053184733189023&4.22087361923225&1.0&1.0\\
+6& NETA&0.7792619417215579&6.2340955337724635&4.22087361923225&1.0&1.0\\
+7& NETB&0.7792619417215579&6.2340955337724635&4.22087361923225&1.0&1.0\\
+8& RAND&1.0&8.0&4.22087361923225&1.0&1.0\\
+\hline
+\end{tabular}
+\end{table}
+
+\begin{table}[!htp]
+\centering\scriptsize
+\caption{Adjusted $p$-values (ALIGNED FRIEDMAN)}
+\begin{tabular}{ccccccc}
+i&algorithm&unadjusted $p$&$p_{Holl}$&$p_{Rom}$&$p_{Finn}$&$p_{Li}$\\
+\hline
+1& GRAPH&0.12127908507634506&0.6445261095927789&0.9223971309589616&0.6445261095927789&1.0000000000000007\\
+2& TORUS&0.5331326698657505&0.99516546853319&1.0&0.952491213461512&0.9999999999999998\\
+3& TREE&0.7034789365387083&0.9993202749204726&1.0&0.9609025772024482&0.9999999999999999\\
+4& RING&0.7566480916486279&0.9993202749204726&1.0&0.9609025772024482&0.9999999999999999\\
+5& SAME&0.7566480916486279&0.9993202749204726&1.0&0.9609025772024482&0.9999999999999999\\
+6& NETA&0.7792619417215579&0.9993202749204726&1.0&0.9609025772024482&0.9999999999999999\\
+7& NETB&0.7792619417215579&0.9993202749204726&1.0&0.9609025772024482&0.9999999999999999\\
+8& RAND&1.0&1.0&1.0&1.0&1.0\\
+\hline
+\end{tabular}
+\end{table}
+
+
+\newpage
+
+\begin{table}[!htp]
+\centering\scriptsize
+\caption{Adjusted $p$-values (QUADE)}
+\begin{tabular}{ccccccc}
+i&algorithm&unadjusted $p$&$p_{Bonf}$&$p_{Holm}$&$p_{Hoch}$&$p_{Homm}$\\
+\hline
+1& GRAPH&0.5373103871065616&4.298483096852493&4.298483096852493&1.0&1.0\\
+2& TORUS&0.7801249754918013&6.24099980393441&5.460874828442609&1.0&1.0\\
+3& TREE&0.8041341354591375&6.4330730836731&5.460874828442609&1.0&1.0\\
+4& NETB&0.9018085226206667&7.2144681809653335&5.460874828442609&1.0&1.0\\
+5& SAME&0.9018085226206667&7.2144681809653335&5.460874828442609&1.0&1.0\\
+6& RING&0.9018085226206671&7.214468180965337&5.460874828442609&1.0&1.0\\
+7& NETA&0.9018085226206671&7.214468180965337&5.460874828442609&1.0&1.0\\
+8& RAND&1.0&8.0&5.460874828442609&1.0&1.0\\
+\hline
+\end{tabular}
+\end{table}
+
+\begin{table}[!htp]
+\centering\scriptsize
+\caption{Adjusted $p$-values (QUADE)}
+\begin{tabular}{ccccccc}
+i&algorithm&unadjusted $p$&$p_{Holl}$&$p_{Rom}$&$p_{Finn}$&$p_{Li}$\\
+\hline
+1& GRAPH&0.5373103871065616&0.9978995226651626&1.0&0.9978995226651626&1.0\\
+2& TORUS&0.7801249754918013&0.9999751554402075&1.0&0.9978995226651626&0.9999999999999999\\
+3& TREE&0.8041341354591375&0.9999751554402075&1.0&0.9978995226651626&0.9999999999999999\\
+4& NETB&0.9018085226206667&0.9999908721399633&1.0&0.9978995226651626&1.0\\
+5& SAME&0.9018085226206667&0.9999908721399633&1.0&0.9978995226651626&1.0\\
+6& RING&0.9018085226206671&0.9999908721399633&1.0&0.9978995226651626&1.0\\
+7& NETA&0.9018085226206671&0.9999908721399633&1.0&0.9978995226651626&1.0\\
+8& RAND&1.0&1.0&1.0&1.0&1.0\\
+\hline
+\end{tabular}
+\end{table}
+
+\end{landscape}\end{document}

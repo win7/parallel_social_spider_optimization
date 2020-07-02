@@ -1,0 +1,6 @@
+topology:RING
+emigration:CLONE
+choiceEmi:BEST
+choiceImm:WORST
+numberEmiImm:5
+intervalEmiImm:2

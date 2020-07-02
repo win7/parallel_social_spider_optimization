@@ -1,0 +1,47 @@
+Objetivo principal: Mejorar la precision del algoritmo SSO para clustering.
+
+cores = 24
+
+1. Implementar varios algoritmos paralelos (MPI) que usen varias 
+
+Topologias estaticas:
+-Topologia de grafo completo. (ok)
+-Topologia de anillo. (ok)
+-Topologia de arbol. (ok)
+-Topologia de Toro. (ok)
+-Topologia de red 6x4. (ok)
+
+Topologias dinamicas:
+-Topologia dinamica (intercambio de mejores-mejores).
+-Topologia dinamica (intercambio de mejores-peores).
+-Topologia dinamica (intercambio aleatorio).
+
+Policy migration
+-Emigration: remove, clone
+-Emmigration: replace
+
+
+2. Experimentos, en los cuales se usaran datasets pequenos y grandes del repositorio UCI.
+
+-Experimentos para fijar los parametros de los algoritmos paralelos (basado en precisión): Datasets pequeños
+-Experimentos para determinar precision y speed-up: Datasets grandes.
+
+Logs:
+mpirun noticed that process rank 0 with PID 0 on node win7-pc exited on signal 11 (Segmentation fault).
+mpirun noticed that process rank 0 with PID 0 on node win7-pc exited on signal 11 (Segmentation fault).
+mpirun noticed that process rank 9 with PID 0 on node win7-pc exited on signal 6 (Aborted).
+mpirun noticed that process rank 2 with PID 0 on node win7-pc exited on signal 11 (Segmentation fault).
+mpirun noticed that process rank 8 with PID 0 on node win7-pc exited on signal 6 (Aborted).
+mpirun noticed that process rank 9 with PID 0 on node win7-pc exited on signal 6 (Aborted).
+mpirun noticed that process rank 3 with PID 0 on node win7-pc exited on signal 6 (Aborted).
+mpirun noticed that process rank 6 with PID 0 on node win7-pc exited on signal 11 (Segmentation fault).
+
+
+mpirun noticed that process rank 17 with PID 0 on node win7-pc exited on signal 11 (Segmentation fault).
+
+
+hasta e
+
+
+
+9864
