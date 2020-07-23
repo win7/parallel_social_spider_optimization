@@ -22,9 +22,9 @@ topology = ["RING", "TREE", "NETA", "NETB", "TORUS", "GRAPH", "SAME", "GOODBAD",
 number_generation = 100      # change {100, 150, 200, 300} for select fitness under number generations
 number_experiments = 10      # change {1, ..., 50}
 initial_number_generation = 0	# change {0, 1, 2, 3, 4, 5} list of initial number generations
-index_dataset_ = [20, 21, 22, 23, 24, 25, 26, 27, 28, 29]	# change [20, 21, 22, 23, 24, 25] or [26, 27, 28, 29]
+index_dataset_ = [20]	# change [20, 21, 22, 23, 24, 25] or [26, 27, 28, 29]
 
-columns = 2
+columns = 1
 rows = int(math.ceil(len(index_dataset_) / columns))
 plt.figure(0)
 
@@ -171,7 +171,8 @@ for count, index_dataset in enumerate(index_dataset_):
 	plt.grid()
 
 	# show a legend on the plot 
-	plt.legend(loc="upper right", ncol=3, borderaxespad=0.2, prop={"size":8})
+	# plt.legend(loc="upper right", ncol=3, borderaxespad=0.2, prop={"size":8})
+	plt.legend(loc="upper right", ncol=3, borderaxespad=0.2, prop={"size":10})
 
 # show a legend on the plot 
 # plt.legend(loc=0)
@@ -179,7 +180,8 @@ for count, index_dataset in enumerate(index_dataset_):
 # plt.legend(bbox_to_anchor=(1.01, 1), loc='upper left', borderaxespad=0., prop={"size":10})
 # plt.legend(bbox_to_anchor=(0., 1.02, 1., .102), loc='lower left', ncol=2, mode="expand", borderaxespad=0.)
 
-plt.subplots_adjust(top=0.96, bottom=0.045, left=0.06, right=0.985, hspace=0.280, wspace=0.150)
+# plt.subplots_adjust(top=0.96, bottom=0.045, left=0.06, right=0.985, hspace=0.280, wspace=0.150)
+plt.subplots_adjust(top=0.96, bottom=0.065, left=0.06, right=0.985, hspace=0.280, wspace=0.150)
 
 # function to show the plot 
 plt.show()
