@@ -22,7 +22,7 @@ topology = ["RING", "TREE", "NETA", "NETB", "TORUS", "GRAPH", "SAME", "GOODBAD",
 number_generation = 100      # change {100, 150, 200, 300} for select fitness under number generations
 number_experiments = 10      # change {1, ..., 50}
 initial_number_generation = 0	# change {0, 1, 2, 3, 4, 5} list of initial number generations
-index_dataset_ = [20]	# change [20, 21, 22, 23, 24, 25] or [26, 27, 28, 29]
+index_dataset_ = [21, 23, 24, 27]	# change [20, 21, 22, 23, 24, 25] or [26, 27, 28, 29]
 
 columns = 1
 rows = int(math.ceil(len(index_dataset_) / columns))
@@ -162,17 +162,17 @@ for count, index_dataset in enumerate(index_dataset_):
 	# plt.ylim(limit_y)
 
 	# naming the x axis 
-	plt.xlabel("Fitness function evaluation number")
+	plt.xlabel("Fitness function evaluation number", fontsize=12)
 	# naming the y axis 
-	plt.ylabel("Metric") 
+	plt.ylabel("Metric", fontsize=12) 
 	# giving a title to my graph 
-	plt.title("Dataset: {}".format(dataset[index_dataset][0]))
+	plt.title("Dataset: {}".format(dataset[index_dataset][0]), fontsize=14)
 	# add grid
 	plt.grid()
 
 	# show a legend on the plot 
 	# plt.legend(loc="upper right", ncol=3, borderaxespad=0.2, prop={"size":8})
-	plt.legend(loc="upper right", ncol=3, borderaxespad=0.2, prop={"size":10})
+	plt.legend(loc="upper right", ncol=3, borderaxespad=0.2, prop={"size":12})
 
 # show a legend on the plot 
 # plt.legend(loc=0)
