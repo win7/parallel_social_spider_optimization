@@ -46,6 +46,7 @@ void showPopulation(PopulationPtr populationPtr);
 void showParameters(PopulationPtr populationPtr, int numberGenerations, int numberDataset);
 void showBestSpider(PopulationPtr populationPtr);
 void showClusterBestSpider(PopulationPtr populationPtr, double **dataset, int row, int column);
+void saveClusterBestSpider(PopulationPtr populationPtr, double **dataset, int row, int column);
 void showMetricBestSpider(PopulationPtr populationPtr, int world_rank);
 void showAllResults(PopulationPtr populationPtr, int numberGenerations, double **dataset, int row, int column);
 void freeMemoryAuxilarPopulation(PopulationPtr populationPtr, AuxPopulationPtr auxPopulationPtr);

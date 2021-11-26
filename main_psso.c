@@ -110,6 +110,10 @@ int main(int argc, char *argv[]) {
         FILE *fp = fopen(fileName, "a");
         fprintf(fp, "%f,%f\n", best_metric, t2 - t1);
         fclose(fp);
+
+        showBestSpider(&population);
+        // Save centroids and labels
+        saveClusterBestSpider(&population, dataset, row, column);
     } else {
         best_metric_aux = population.spiders[population.indexBest]->fitness;
         MPI_Send(&best_metric_aux, 1, MPI_DOUBLE, 0, 0, MPI_COMM_WORLD);

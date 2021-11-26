@@ -764,6 +764,47 @@ void showClusterBestSpider(PopulationPtr populationPtr, double **dataset, int ro
     }
 }
 
+void saveClusterBestSpider(PopulationPtr populationPtr, double **dataset, int row, int column){
+    char file_centroids[256];
+    sprintf(file_centroids, "%s", "p_sso/centroids.csv");
+    FILE *fp_centroids = fopen(file_centroids, "w");
+
+    char file_labels[256];
+    sprintf(file_labels, "%s", "p_sso/labels.csv");
+    FILE *fp_labels = fopen(file_labels, "w");
+
+    int labels [row];
+    // double centers [populationPtr->numClusters][populationPtr->pointDimension];
+    int i, j, k = 0;
+    for(i = 0; i < populationPtr->numClusters; i++){
+        for(j = 0; j < populationPtr->spiders[populationPtr->indexBest]->lengthDatasetClusters; j++){
+            if (i == populationPtr->spiders[populationPtr->indexBest]->datasetClusters[j]){
+                labels[j] = i;
+            }
+        }
+        for(j = 0; j < populationPtr->pointDimension - 1; j++){
+            // centers[i][j] = populationPtr->spiders[populationPtr->indexBest]->centers[i]->point[j];
+            fprintf(fp_centroids, "%f,", populationPtr->spiders[populationPtr->indexBest]->centers[i]->point[j]);
+        }
+        // centers[i][j] = populationPtr->spiders[populationPtr->indexBest]->centers[i]->point[j];
+        fprintf(fp_centroids, "%f\n", populationPtr->spiders[populationPtr->indexBest]->centers[i]->point[j]);
+    }
+    
+    for (k = 0; k < row; k++) {
+        // printf("%d, ", labels[k]);
+        fprintf(fp_labels, "%d\n", labels[k]);
+    }
+    /* printf("\n");
+    for(i = 0; i < populationPtr->numClusters; i++){
+        for(j = 0; j < populationPtr->pointDimension; j++){
+            printf("%f; ", centers[i][j]);
+        }
+        printf("\n");
+    } */
+    fclose(fp_centroids);
+    fclose(fp_labels);
+}
+
 void showMetricBestSpider(PopulationPtr populationPtr, int world_rank){
     printf("Core [%d], Best metric [%d]: %f\n", world_rank, populationPtr->indexBest, populationPtr->spiders[populationPtr->indexBest]->fitness);
 }

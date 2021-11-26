@@ -54,6 +54,9 @@ int main(int argc, char *argv[]){
 
     showAllResults(&population, numberGenerations, dataset, row, column);
     // showMetricBestSpider(&population);
+    showBestSpider(&population);
+    // Save centroids and labels
+    saveClusterBestSpider(&population, dataset, row, column);
 
     freeMemoryReadColumn(columns);
     freeMemoryReadDataset(dataset, row);
