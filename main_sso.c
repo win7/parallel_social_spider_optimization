@@ -67,3 +67,4 @@ int main(int argc, char *argv[]){
 
 // Run:
 // $ ./main_sso dataset/iris.cols 3 150 dataset/iris.data 169735477
+// $ ./main_sso dataset/locations.cols 5 1635 dataset/locations.data 169735477

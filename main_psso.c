@@ -33,7 +33,7 @@ int main(int argc, char *argv[]) {
     char *fileNamePolicy = argv[5];
     int seed = atoi(argv[6]);
 
-    int numberGenerations = 100;
+    int numberGenerations = 20;
     int populationSize = 100;
 
     allocateMemoryReadColumn(&columns, &column, fileNameColumns);
@@ -105,11 +105,11 @@ int main(int argc, char *argv[]) {
 
         printf("[%d, %f, %f]\n", best_rank, best_metric, t2 - t1);
 
-        char fileName[256];
+        /* char fileName[256];
         sprintf(fileName, "%s", "output/psso/example_psso.out");
         FILE *fp = fopen(fileName, "a");
         fprintf(fp, "%f,%f\n", best_metric, t2 - t1);
-        fclose(fp);
+        fclose(fp); */
 
         showBestSpider(&population);
         // Save centroids and labels
@@ -131,3 +131,4 @@ int main(int argc, char *argv[]) {
 
 // Run:
 // mpirun -n 24 --oversubscribe ./main_psso dataset/iris.cols 3 150 dataset/iris.data policy/policy.in 169735477
+// mpirun -n 24 --oversubscribe ./main_psso dataset/locations.cols 5 1635 dataset/locations.data policy/policy.in 169735477
