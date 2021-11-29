@@ -10,6 +10,7 @@ Authors:
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <time.h>
 #include "clusterCenter.h"
 #include "spider.h"
 #include "population.h"
@@ -30,10 +31,13 @@ int main(int argc, char *argv[]){
     int seed = atoi(argv[5]);
 
     int numberGenerations = 100;
-    int populationSize = 100;
+    int populationSize = 120; // 100
 
     allocateMemoryReadColumn(&columns, &column, fileNameColumns);
     allocateMemoryReadDataset(&dataset, row, column, columns, fileNameRows);
+
+    clock_t t1, t2;
+    t1 = clock();
 
     generateSeed(seed);
     generateInitialPopulation(&population, populationSize, numberClusters, dataset, row, column, 0, &auxPopulation, &auxSpider);
@@ -51,6 +55,9 @@ int main(int argc, char *argv[]){
         // showBestFitness(&population, i);
         // showBestSpider(&population);
     }
+
+    t2 = clock();
+    printf("[%f]\n", ((double) (t2 - t1)) / CLOCKS_PER_SEC);
 
     showAllResults(&population, numberGenerations, dataset, row, column);
     // showMetricBestSpider(&population);

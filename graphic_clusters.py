@@ -54,3 +54,6 @@ for i in u_labels:
 plt.scatter(centroids[:,0], centroids[:,1], s=80, color='k')
 plt.legend()
 plt.show()
+
+# Run:
+# python graphic_clusters.py

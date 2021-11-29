@@ -84,7 +84,7 @@ void allocateMemoryReadColumn(int **array, int *column, char *fileName){
     *array = (int*)malloc(sizeof(int) * 255);
 
     if ((cfPtr = fopen(fileName, "r")) == NULL) {
-        printf("File could not be opened\n");
+        printf("File could not be opened %s \n", fileName);
         exit(1);
     } else {
         while(fscanf(cfPtr, "%d", &data) != EOF ) {
@@ -144,7 +144,7 @@ void allocateMemoryReadDataset(double ***matrix, int row, int column, int *colum
     // printf("Read dataset\n");
     *matrix = (double**)malloc(sizeof(double*) * row);
     if ((cfPtr = fopen(fileName, "r")) == NULL) {
-        printf("File could not be opened\n");
+        printf("File could not be opened %s \n", fileName);
         exit(1);
     } else {
         if (*matrix == NULL){
@@ -190,7 +190,7 @@ void allocateMemoryReadPopulation(double ***matrix, int row, int column, char *f
     // printf("Read population\n");
     *matrix = (double**)malloc(sizeof(double*) * row);
     if ((cfPtr = fopen(fileName, "r")) == NULL) {
-        printf("File could not be opened\n");
+        printf("File could not be opened %s \n", fileName);
         exit(1);
     } else {
         if (*matrix == NULL){
@@ -261,7 +261,7 @@ void readPolicy(PolicyPtr policyPtr, char *fileName){
     char *item;
 
     if ((cfPtr = fopen(fileName, "r")) == NULL) {
-        printf("File could not be opened\n");
+        printf("File could not be opened %s \n", fileName);
         exit(1);
     } else {
         fscanf(cfPtr, "%s", item_read);

@@ -33,8 +33,8 @@ int main(int argc, char *argv[]) {
     char *fileNamePolicy = argv[5];
     int seed = atoi(argv[6]);
 
-    int numberGenerations = 20;
-    int populationSize = 100;
+    int numberGenerations = 100;
+    int populationSize = 5;
 
     allocateMemoryReadColumn(&columns, &column, fileNameColumns);
     allocateMemoryReadDataset(&dataset, row, column, columns, fileNameRows);
