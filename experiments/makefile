@@ -3,13 +3,7 @@ CFLAGS = -g -Wall -O2 		# flags when *compiling*
 LFLAGS = -g -Wall 			# flags when *linking*
 LIBS = -lm 					# math library
 
-ifeq ($(ALGO), sso)
-    SOURCES = main_sso.c clusterCenter.c spider.c population.c utils.c
-else
-	SOURCES = main_psso.c clusterCenter.c spider.c population.c topology.c utils.c
-endif
-
-# SOURCES = main_sso.c clusterCenter.c spider.c population.c utils.c
+SOURCES = main_sso.c clusterCenter.c spider.c population.c utils.c
 # SOURCES = main_psso.c clusterCenter.c spider.c population.c topology.c utils.c
 # SOURCES = main_population.c clusterCenter.c spider.c population.c topology.c utils.c
 # SOURCES = main_fitness.c clusterCenter.c spider.c population.c topology.c utils.c
@@ -18,13 +12,7 @@ endif
 
 OBJECTS = $(SOURCES:.c=.o)
 
-ifeq ($(ALGO), sso)
-    EXECUTABLE = main_sso
-else
-	EXECUTABLE = main_psso
-endif
-
-# EXECUTABLE = main_sso
+EXECUTABLE = main_sso
 # EXECUTABLE = main_psso
 # EXECUTABLE = main_population
 # EXECUTABLE = main_fitness
