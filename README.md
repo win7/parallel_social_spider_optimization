@@ -1,4 +1,4 @@
-# Parallel-Social Spider Otimization
+# Parallel Social Spider Otimization (P-SSO)
 
 
 ## Introduction
