@@ -179,9 +179,22 @@ The algorthms (SSo or P-SSO) takes as input two dataset one taken from UCI machi
 
     In the `output` folder, there are the centroids and the labels.
 
-
-### Bug Reporting
+## Bug Reporting
 
 If you find any problem in our programs please contact us to: 
 win7.eam@gmail.com
 
+## Citing
+
+If you find P-SSO useful for your research, please consider citing the following paper:
+
+```
+@inproceedings{alvarez2021parallel,
+  title={Parallel social spider optimization algorithms with island model for the clustering problem},
+  author={Alvarez-Mamani, Edwin and Enciso-Rodas, Lauro and Ayala-Rinc{\'o}n, Mauricio and Soncco-{\'A}lvarez, Jos{\'e} L},
+  booktitle={Information Management and Big Data: 7th Annual International Conference, SIMBig 2020, Lima, Peru, October 1--3, 2020, Proceedings},
+  pages={122--138},
+  year={2021},
+  organization={Springer}
+}
+```
