@@ -1,4 +1,4 @@
-# Parallel-SocialSpiderOtimization
+# Parallel-Social Spider Otimization
 
 
 ## Introduction
