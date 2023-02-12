@@ -96,7 +96,7 @@ int main(int argc, char *argv[]) {
         best_rank = 0;
         for (int k = 1; k < world_size; k++) {
             MPI_Recv(&best_metric_aux, 1, MPI_DOUBLE, k, 0, MPI_COMM_WORLD, MPI_STATUS_IGNORE);
-            if (best_metric_aux >= best_metric) {
+            if (best_metric_aux <= best_metric) {
                 best_metric = best_metric_aux;
                 best_rank = k;
             }

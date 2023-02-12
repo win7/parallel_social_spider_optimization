@@ -39,9 +39,6 @@ mpirun noticed that process rank 6 with PID 0 on node win7-pc exited on signal 1
 
 mpirun noticed that process rank 17 with PID 0 on node win7-pc exited on signal 11 (Segmentation fault).
 
-
 hasta e
-
-
 
 9864

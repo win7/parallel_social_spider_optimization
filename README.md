@@ -1,4 +1,4 @@
-# Parallel_SocialSpiderOtimization
+# Parallel-SocialSpiderOtimization
 
 
 ## Introduction
@@ -77,10 +77,13 @@ The algorthms (SSo or P-SSO) takes as input two dataset one taken from UCI machi
     ./main_sso input/australian.cols 2 690 input/australian.data 169735477
     ```
     ```
-    ./main_sso input/breast_cancer.cols 2 699 input/breast_cancer.data 169735477
+    ./main_sso input/breast_cancer_wisconsin.cols 2 699 input/breast_cancer_wisconsin.data 169735477
     ```
     ```
     ./main_sso input/healthy_older_people.cols 4 724 input/healthy_older_people.data 169735477
+    ```
+    ```
+    ./main_sso input/yeast.cols 10 1484 input/avila.data 169735477
     ```
     ```
     ./main_sso input/avila.cols 12 10430 input/avila.data 169735477
@@ -131,41 +134,44 @@ The algorthms (SSo or P-SSO) takes as input two dataset one taken from UCI machi
     - policy        :   migration policies for population exchange
     - seed			:	seed for rand
 
-    Example: For the some dataset the command is the following: `mpirun -n 24 --oversubscribe ./main_sso columnsFile k n dataFile policy seed`
+    Example: For the some dataset the command is the following: `mpirun -n 24 --oversubscribe ./main_psso columnsFile k n dataFile policy seed`
     ```
     mpirun -n 24 --oversubscribe ./main_psso input/iris.cols 3 150 input/iris.data policy/policy.in 169735477
     ```
     More examples:
 
     ```
-    mpirun -n 24 --oversubscribe ./main_sso input/crude_oil.cols 3 56 input/crude_oil.data 169735477
+    mpirun -n 24 --oversubscribe ./main_psso input/crude_oil.cols 3 56 input/crude_oil.data policy/policy.in 169735477
     ```
     ```
-    mpirun -n 24 --oversubscribe ./main_sso input/breast_tissue.cols 6 106 input/breast_tissue.data 169735477
+    mpirun -n 24 --oversubscribe ./main_psso input/breast_tissue.cols 6 106 input/breast_tissue.data policy/policy.in 169735477
     ```
     ```
-    mpirun -n 24 --oversubscribe ./main_sso input/wine.cols 3 178 input/wine.data 169735477
+    mpirun -n 24 --oversubscribe ./main_psso input/wine.cols 3 178 input/wine.data policy/policy.in 169735477
     ```
     ```
-    mpirun -n 24 --oversubscribe ./main_sso input/heart.cols 2 270 input/heart.data 169735477
+    mpirun -n 24 --oversubscribe ./main_psso input/heart.cols 2 270 input/heart.data policy/policy.in 169735477
     ```
     ```
-    mpirun -n 24 --oversubscribe ./main_sso input/column_2c.cols 2 310 input/column_2c.data 169735477
+    mpirun -n 24 --oversubscribe ./main_psso input/column_2c.cols 2 310 input/column_2c.data policy/policy.in 169735477
     ```
     ```
-    mpirun -n 24 --oversubscribe ./main_sso input/column_3c.cols 3 310 input/column_3c.data 169735477
+    mpirun -n 24 --oversubscribe ./main_psso input/column_3c.cols 3 310 input/column_3c.data policy/policy.in 169735477
     ```
     ```
-    mpirun -n 24 --oversubscribe ./main_sso input/australian.cols 2 690 input/australian.data 169735477
+    mpirun -n 24 --oversubscribe ./main_psso input/australian.cols 2 690 input/australian.data policy/policy.in 169735477
     ```
     ```
-    mpirun -n 24 --oversubscribe ./main_sso input/breast_cancer.cols 2 699 input/breast_cancer.data 169735477
+    mpirun -n 24 --oversubscribe ./main_psso input/breast_cancer_wisconsin.cols 2 699 input/breast_cancer_wisconsin.data policy/policy.in 169735477
     ```
     ```
-    mpirun -n 24 --oversubscribe ./main_sso input/healthy_older_people.cols 4 724 input/healthy_older_people.data 169735477
+    mpirun -n 24 --oversubscribe ./main_psso input/healthy_older_people.cols 4 724 input/healthy_older_people.data policy/policy.in 169735477
     ```
     ```
-    mpirun -n 24 --oversubscribe ./main_sso input/avila.cols 12 10430 input/avila.data 169735477
+    mpirun -n 24 --oversubscribe ./main_psso input/yeast.cols 10 1484 input/avila.data policy/policy.in 169735477
+    ```
+    ```
+    mpirun -n 24 --oversubscribe ./main_psso input/avila.cols 12 10430 input/avila.data policy/policy.in 169735477
     ```
 
 3. Result: 

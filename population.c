@@ -766,11 +766,11 @@ void showClusterBestSpider(PopulationPtr populationPtr, double **dataset, int ro
 
 void saveClusterBestSpider(PopulationPtr populationPtr, double **dataset, int row, int column){
     char file_centroids[256];
-    sprintf(file_centroids, "%s", "p_sso/centroids.csv");
+    sprintf(file_centroids, "%s", "output/centroids.csv");
     FILE *fp_centroids = fopen(file_centroids, "w");
 
     char file_labels[256];
-    sprintf(file_labels, "%s", "p_sso/labels.csv");
+    sprintf(file_labels, "%s", "output/labels.csv");
     FILE *fp_labels = fopen(file_labels, "w");
 
     int labels [row];
