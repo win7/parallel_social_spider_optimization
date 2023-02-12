@@ -1,0 +1,6 @@
+topology:NETA
+emigration:CLONE
+choiceEmi:BEST
+choiceImm:RANDOM
+numberEmiImm:2
+intervalEmiImm:1
