@@ -56,14 +56,19 @@ int main(int argc, char *argv[]){
         // showBestSpider(&population);
     }
 
+    double best_metric = population.spiders[population.indexBest]->fitness;
     t2 = clock();
-    printf("[%f]\n", ((double) (t2 - t1)) / CLOCKS_PER_SEC);
 
-    showAllResults(&population, numberGenerations, dataset, row, column);
+    // printf("[%f, %f]\n", best_metric, ((double) (t2 - t1)) / CLOCKS_PER_SEC);
+    printf("Best metric: %f, Runtime: %f sec.\n", best_metric, ((double) (t2 - t1)) / CLOCKS_PER_SEC);
+
+    // showAllResults(&population, numberGenerations, dataset, row, column);
     // showMetricBestSpider(&population);
     showBestSpider(&population);
     // Save centroids and labels
     saveClusterBestSpider(&population, dataset, row, column);
+
+    printf("\n*** The centroids and labels are into output folder *** \n\n");
 
     freeMemoryReadColumn(columns);
     freeMemoryReadDataset(dataset, row);
@@ -73,5 +78,5 @@ int main(int argc, char *argv[]){
 }
 
 // Run:
-// $ ./main_sso dataset/iris.cols 3 150 dataset/iris.data 169735477
-// $ ./main_sso dataset/locations.cols 5 1635 dataset/locations.data 169735477
+// $ ./main_sso input/iris.cols 3 150 input/iris.data 169735477
+// $ ./main_sso input/locations.cols 5 1635 input/locations.data 169735477

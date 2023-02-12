@@ -103,7 +103,8 @@ int main(int argc, char *argv[]) {
         }
         t2 = MPI_Wtime(); 
 
-        printf("[%d, %f, %f]\n", best_rank, best_metric, t2 - t1);
+        // printf("[%d, %f, %f]\n", best_rank, best_metric, t2 - t1);
+        printf("Best rank: %d, Best metric: %f, Runtime: %f sec.\n", best_rank, best_metric, t2 - t1);
 
         /* char fileName[256];
         sprintf(fileName, "%s", "output/psso/example_psso.out");
@@ -114,6 +115,8 @@ int main(int argc, char *argv[]) {
         showBestSpider(&population);
         // Save centroids and labels
         saveClusterBestSpider(&population, dataset, row, column);
+
+        printf("\n*** The centroids and labels are into output folder *** \n\n");
     } else {
         best_metric_aux = population.spiders[population.indexBest]->fitness;
         MPI_Send(&best_metric_aux, 1, MPI_DOUBLE, 0, 0, MPI_COMM_WORLD);
@@ -130,5 +133,5 @@ int main(int argc, char *argv[]) {
 }
 
 // Run:
-// mpirun -n 24 --oversubscribe ./main_psso dataset/iris.cols 3 150 dataset/iris.data policy/policy.in 169735477
-// mpirun -n 24 --oversubscribe ./main_psso dataset/locations.cols 5 1635 dataset/locations.data policy/policy.in 169735477
+// mpirun -n 24 --oversubscribe ./main_psso input/iris.cols 3 150 input/iris.data policy/policy.in 169735477
+// mpirun -n 24 --oversubscribe ./main_psso input/locations.cols 5 1635 input/locations.data policy/policy.in 169735477
