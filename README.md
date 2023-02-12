@@ -24,6 +24,7 @@ To run the SS or P-SSO algorithms you need to install the following:
 - population.c      :   This file contains the functions of the SSO algorithm for the clustering problem  that interact with the ClusterCenter and Spider structures.
 - spider.c     		: 	This file contains functions to interact with the Spider data structure.
 - structs.h        	:	This file contains the definition of clusterCenter, spider, population and auxPopulation structures.
+- topology.c        :   This file contains the migrations functions for P-SSO.
 - utils.c 	        :   This file contains some auxiliary functions.
 
 ## Usage
