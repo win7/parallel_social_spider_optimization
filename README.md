@@ -31,7 +31,7 @@ To run the SS or P-SSO algorithms you need to install the following:
 
 ### Dataset
 
-The algorthms (SSo or P-SSO) takes as input two dataset one taken from UCI machine learning (e.g iris.data) and the other dataset that represents the number of columns (e.g. iris.cols) that will be taken from the main dataset to perform the experiments.
+The algorithms (SSO or P-SSO) takes as input two dataset one taken from UCI machine learning (e.g iris.data) and the other dataset that represents the number of columns (e.g. iris.cols) that will be taken from the main dataset to perform the experiments.
 
 ### Run SSO
 
